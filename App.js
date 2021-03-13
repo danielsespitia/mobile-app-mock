@@ -51,6 +51,17 @@ const CardTitle = styled.Text`
   font-weight: 450;
 `;
 
+const MainSubtitle = styled.Text`
+  text-align: center;
+  align-self: center;
+  width: 70%;
+  margin-top: 35px;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 450;
+  opacity: 0.4;
+`;
+
 const BlueCardsContainer = styled.View`
   flex-direction: row;
   margin-top: 20px;
@@ -107,6 +118,13 @@ const CardIcon = styled.Image`
 const WhiteCardTitle = styled.Text`
   font-size: 17px;
   margin-top: 5px;
+`;
+
+const Graph = styled.Image`
+  align-self: center;
+  margin-top: 50px;
+  height: 100px;
+  width: 100px;
 `;
 
 export default function App() {
@@ -189,6 +207,13 @@ export default function App() {
           </WhiteCard>
         </TouchableOpacity>
       </WhiteCardsContainer>
+      <CardTitle>Immunization tracker</CardTitle>
+      <MainSubtitle>
+        Your immunization tracker is currently empty. Add your records to
+        complete your child's profile
+      </MainSubtitle>
+      <Graph source={require('./assets/graph.png')}
+      />
     </View>
   );
 }
