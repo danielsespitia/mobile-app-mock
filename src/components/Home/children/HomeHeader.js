@@ -5,6 +5,7 @@ import {
   Title,
   Subtitle,
   ProfilePictureContainer,
+  ProfilePictureButtonContainer,
   ProfilePicture,
   ProfilePictureUpload,
   Username,
@@ -18,17 +19,19 @@ function HomeHeader() {
         <Subtitle>Connecting better health</Subtitle>
       </AppIntro>
       <ProfilePictureContainer>
-        <ProfilePicture
-          source={{
-            uri:
-              'http://alohahotelpalmsprings.com/template/imgs/testimonial-1.jpg',
-          }}
-        />
-        <TouchableOpacity>
-          <ProfilePictureUpload
-            source={require('../../../../assets/photoicon.png')}
+        <ProfilePictureButtonContainer>
+          <ProfilePicture
+            source={{
+              uri:
+                'http://alohahotelpalmsprings.com/template/imgs/testimonial-1.jpg',
+            }}
           />
-        </TouchableOpacity>
+          <TouchableOpacity>
+            <ProfilePictureUpload
+              source={require('../../../../assets/photoicon.png')}
+            />
+          </TouchableOpacity>
+        </ProfilePictureButtonContainer>
       </ProfilePictureContainer>
       <Username>User Name</Username>
     </View>

@@ -5,12 +5,11 @@ export const AppIntro = styled.View`
   justify-content: flex-start;
   background-color: #4282f4;
   height: 250px;
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 300px;
+  border-bottom-left-radius: 300px;
   align-self: center;
-  width: 50%;
+  width: 130%;
   position: absolute;
-  transform: scaleX(2);
 `;
 
 export const Title = styled.Text`
@@ -20,7 +19,7 @@ export const Title = styled.Text`
   font-size: 42px;
   font-weight: bold;
   color: white;
-  transform: scaleX(0.5);
+  
 `;
 
 export const Subtitle = styled.Text`
@@ -29,26 +28,34 @@ export const Subtitle = styled.Text`
   font-size: 20px;
   color: white;
   opacity: 0.7;
-  transform: scaleX(0.5);
+  
 `;
 
-export const ProfilePictureContainer = styled.View``;
+export const ProfilePictureContainer = styled.View`
+`;
+
+export const ProfilePictureButtonContainer = styled.View`
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 150px;
+`;
 
 export const ProfilePicture = styled.Image`
   height: 150px;
   width: 150px;
   border-radius: 100px;
   margin-top: 170px;
-  margin-left: auto;
-  margin-right: auto;
 `;
 
 export const ProfilePictureUpload = styled.Image`
+  position: absolute;
+  right: 0;
+  bottom: 0;
   height: 40px;
   width: 40px;
   border-radius: 100px;
-  margin-left: 250px;
-  margin-top: -40px;
+  
 `;
 
 export const Username = styled.Text`
@@ -113,7 +120,7 @@ export const WhiteCardsContainer = styled.View`
 
 export const WhiteCard = styled.View`
   background-color: white;
-  height: 150px;
+  height: 140px;
   margin-top: 20px;
   width: 195px;
   border-radius: 20px;
@@ -126,13 +133,13 @@ export const WhiteCardInfo = styled.View`
 
 export const CardIcon = styled.Image`
   border-radius: 50px;
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
 `;
 
 export const WhiteCardTitle = styled.Text`
-  font-size: 17px;
-  margin-top: 5px;
+  font-size: 20px;
+  margin-top: 10px;
 `;
 
 export const Graph = styled.Image`
