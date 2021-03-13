@@ -1,7 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Button,
+} from 'react-native';
 import styled from 'styled-components/native';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+import Home from './src/components/Home/Home';
+import Notification from './src/components/Notification/Notification';
+import Account from './src/components/Account/Account';
+
+const Tab = createMaterialBottomTabNavigator();
 
 const AppIntro = styled.View`
   justify-content: center;
@@ -27,6 +43,10 @@ const Subtitle = styled.Text`
   opacity: 0.7;
 `;
 
+const ProfilePictureContainer = styled.View`
+  z-index: 2;
+`;
+
 const ProfilePicture = styled.Image`
   height: 150px;
   width: 150px;
@@ -34,6 +54,14 @@ const ProfilePicture = styled.Image`
   margin-top: 300px;
   margin-left: auto;
   margin-right: auto;
+`;
+
+const ProfilePictureUpload = styled.Image`
+  height: 40;
+  width: 40;
+  border-radius: 100;
+  margin-left: 280px;
+  margin-top: -40px;
 `;
 
 const Username = styled.Text`
@@ -59,7 +87,7 @@ const MainSubtitle = styled.Text`
   margin-left: 20px;
   font-size: 20px;
   font-weight: 450;
-  opacity: 0.4;
+  opacity: 0.5;
 `;
 
 const BlueCardsContainer = styled.View`
@@ -122,99 +150,147 @@ const WhiteCardTitle = styled.Text`
 
 const Graph = styled.Image`
   align-self: center;
-  margin-top: 50px;
-  height: 100px;
-  width: 100px;
+  margin-top: 70px;
+  margin-bottom: 220px;
+  height: 180px;
+  width: 180px;
 `;
 
 export default function App() {
   return (
-    <View style={{ backgroundColor: '#F4F4F4' }}>
-      <AppIntro>
-        <Title>WellUp</Title>
-        <Subtitle>Connecting better health</Subtitle>
-      </AppIntro>
-      <ProfilePicture
-        source={{
-          uri:
-            'http://alohahotelpalmsprings.com/template/imgs/testimonial-1.jpg',
-        }}
-      />
-      <Username>User Name</Username>
-      <CardTitle>Alerts</CardTitle>
-      <BlueCardsContainer>
-        <TouchableOpacity>
-          <BlueCard>
-            <CardTitleIn>Daily reminder</CardTitleIn>
-            <CardSubtitle>[School Name] request a physical form</CardSubtitle>
-          </BlueCard>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <BlueCard>
-            <CardTitleIn>Upcoming vaccine</CardTitleIn>
-            <CardSubtitle>Schedule a covid vaccination</CardSubtitle>
-          </BlueCard>
-        </TouchableOpacity>
-      </BlueCardsContainer>
-      <CardTitle>My smart record</CardTitle>
-      <WhiteCardsContainer>
-        <TouchableOpacity>
-          <WhiteCard style={styles.whitecard}>
-            <WhiteCardInfo>
-              <CardIcon source={require('./assets/covid-icon.png')} />
-              <WhiteCardTitle>Covid vaccination</WhiteCardTitle>
-            </WhiteCardInfo>
-          </WhiteCard>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <WhiteCard style={styles.whitecard}>
-            <WhiteCardInfo>
-              <CardIcon source={require('./assets/immunization.jpg')} />
-              <WhiteCardTitle>Immunization</WhiteCardTitle>
-            </WhiteCardInfo>
-          </WhiteCard>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <WhiteCard style={styles.whitecard}>
-            <WhiteCardInfo>
-              <CardIcon source={require('./assets/allergies.jpg')} />
-              <WhiteCardTitle>Allergies</WhiteCardTitle>
-            </WhiteCardInfo>
-          </WhiteCard>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <WhiteCard style={styles.whitecard}>
-            <WhiteCardInfo>
-              <CardIcon source={require('./assets/vitals.jpg')} />
-              <WhiteCardTitle>Vitals</WhiteCardTitle>
-            </WhiteCardInfo>
-          </WhiteCard>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <WhiteCard style={styles.whitecard}>
-            <WhiteCardInfo>
-              <CardIcon source={require('./assets/forms.jpg')} />
-              <WhiteCardTitle>Forms</WhiteCardTitle>
-            </WhiteCardInfo>
-          </WhiteCard>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <WhiteCard style={styles.whitecard}>
-            <WhiteCardInfo>
-              <CardIcon source={require('./assets/health-records.jpg')} />
-              <WhiteCardTitle>Add health records</WhiteCardTitle>
-            </WhiteCardInfo>
-          </WhiteCard>
-        </TouchableOpacity>
-      </WhiteCardsContainer>
-      <CardTitle>Immunization tracker</CardTitle>
-      <MainSubtitle>
-        Your immunization tracker is currently empty. Add your records to
-        complete your child's profile
-      </MainSubtitle>
-      <Graph source={require('./assets/graph.png')}
-      />
-    </View>
+    <NavigationContainer>
+      <StatusBar style="auto" />
+      <View style={{ backgroundColor: '#F4F4F4' }}>
+        <AppIntro>
+          <Title>WellUp</Title>
+          <Subtitle>Connecting better health</Subtitle>
+        </AppIntro>
+        <ProfilePictureContainer>
+          <ProfilePicture
+            source={{
+              uri:
+                'http://alohahotelpalmsprings.com/template/imgs/testimonial-1.jpg',
+            }}
+          />
+          <ProfilePictureUpload
+              source={require('./assets/photoicon.png')}
+          />
+        </ProfilePictureContainer>
+        <Username>User Name</Username>
+        <CardTitle>Alerts</CardTitle>
+        <BlueCardsContainer>
+          <TouchableOpacity>
+            <BlueCard>
+              <CardTitleIn>Daily reminder</CardTitleIn>
+              <CardSubtitle>[School Name] request a physical form</CardSubtitle>
+            </BlueCard>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <BlueCard>
+              <CardTitleIn>Upcoming vaccine</CardTitleIn>
+              <CardSubtitle>Schedule a covid vaccination</CardSubtitle>
+            </BlueCard>
+          </TouchableOpacity>
+        </BlueCardsContainer>
+        <CardTitle>My smart record</CardTitle>
+        <WhiteCardsContainer>
+          <TouchableOpacity>
+            <WhiteCard style={styles.whitecard}>
+              <WhiteCardInfo>
+                <CardIcon source={require('./assets/covid-icon.png')} />
+                <WhiteCardTitle>Covid vaccination</WhiteCardTitle>
+              </WhiteCardInfo>
+            </WhiteCard>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <WhiteCard style={styles.whitecard}>
+              <WhiteCardInfo>
+                <CardIcon source={require('./assets/immunization.jpg')} />
+                <WhiteCardTitle>Immunization</WhiteCardTitle>
+              </WhiteCardInfo>
+            </WhiteCard>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <WhiteCard style={styles.whitecard}>
+              <WhiteCardInfo>
+                <CardIcon source={require('./assets/allergies.jpg')} />
+                <WhiteCardTitle>Allergies</WhiteCardTitle>
+              </WhiteCardInfo>
+            </WhiteCard>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <WhiteCard style={styles.whitecard}>
+              <WhiteCardInfo>
+                <CardIcon source={require('./assets/vitals.jpg')} />
+                <WhiteCardTitle>Vitals</WhiteCardTitle>
+              </WhiteCardInfo>
+            </WhiteCard>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <WhiteCard style={styles.whitecard}>
+              <WhiteCardInfo>
+                <CardIcon source={require('./assets/forms.jpg')} />
+                <WhiteCardTitle>Forms</WhiteCardTitle>
+              </WhiteCardInfo>
+            </WhiteCard>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <WhiteCard style={styles.whitecard}>
+              <WhiteCardInfo>
+                <CardIcon source={require('./assets/health-records.jpg')} />
+                <WhiteCardTitle>Add health records</WhiteCardTitle>
+              </WhiteCardInfo>
+            </WhiteCard>
+          </TouchableOpacity>
+        </WhiteCardsContainer>
+        <CardTitle>Immunization tracker</CardTitle>
+        <MainSubtitle>
+          Your immunization tracker is currently empty. Add your records to
+          complete your child's profile
+        </MainSubtitle>
+        <Graph source={require('./assets/graph.png')} />
+        <Tab.Navigator
+          activeColor="#4282f4"
+          inactiveColor="#a0c0f9"
+          barStyle={{ backgroundColor: 'white' }}
+        >
+          <Tab.Screen
+            name="Home"
+            component={Home}
+            options={{
+              tabBarLabel: 'Home',
+              tabBarIcon: ({ color }) => (
+                <MaterialCommunityIcons name="home" color={color} size={24} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Notification"
+            component={Notification}
+            options={{
+              tabBarLabel: 'Notification',
+              tabBarIcon: ({ color }) => (
+                <MaterialCommunityIcons name="bell" color={color} size={24} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Account"
+            component={Account}
+            options={{
+              tabBarLabel: 'Account',
+              tabBarIcon: ({ color }) => (
+                <MaterialCommunityIcons
+                  name="account"
+                  color={color}
+                  size={24}
+                />
+              ),
+            }}
+          />
+        </Tab.Navigator>
+      </View>
+    </NavigationContainer>
   );
 }
 
