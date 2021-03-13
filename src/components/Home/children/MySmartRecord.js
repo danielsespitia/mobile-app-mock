@@ -28,7 +28,7 @@ function MySmartRecord(
         <TouchableOpacity>
           <WhiteCard style={styles.whitecard}>
             <WhiteCardInfo>
-              <CardIcon source={require('../../../../assets/immunization.jpg')} />
+              <CardIcon source={require('../../../../assets/immunization.png')} />
               <WhiteCardTitle>Immunization</WhiteCardTitle>
             </WhiteCardInfo>
           </WhiteCard>
@@ -36,7 +36,7 @@ function MySmartRecord(
         <TouchableOpacity>
           <WhiteCard style={styles.whitecard}>
             <WhiteCardInfo>
-              <CardIcon source={require('../../../../assets/allergies.jpg')} />
+              <CardIcon source={require('../../../../assets/allergies.png')} />
               <WhiteCardTitle>Allergies</WhiteCardTitle>
             </WhiteCardInfo>
           </WhiteCard>
@@ -44,7 +44,7 @@ function MySmartRecord(
         <TouchableOpacity>
           <WhiteCard style={styles.whitecard}>
             <WhiteCardInfo>
-              <CardIcon source={require('../../../../assets/vitals.jpg')} />
+              <CardIcon source={require('../../../../assets/vitals.png')} />
               <WhiteCardTitle>Vitals</WhiteCardTitle>
             </WhiteCardInfo>
           </WhiteCard>
@@ -52,7 +52,7 @@ function MySmartRecord(
         <TouchableOpacity>
           <WhiteCard style={styles.whitecard}>
             <WhiteCardInfo>
-              <CardIcon source={require('../../../../assets/forms.jpg')} />
+              <CardIcon source={require('../../../../assets/forms.png')} />
               <WhiteCardTitle>Forms</WhiteCardTitle>
             </WhiteCardInfo>
           </WhiteCard>
@@ -60,7 +60,7 @@ function MySmartRecord(
         <TouchableOpacity>
           <WhiteCard style={styles.whitecard}>
             <WhiteCardInfo>
-              <CardIcon source={require('../../../../assets/health-records.jpg')} />
+              <CardIcon source={require('../../../../assets/health-records.png')} />
               <WhiteCardTitle>Add health records</WhiteCardTitle>
             </WhiteCardInfo>
           </WhiteCard>

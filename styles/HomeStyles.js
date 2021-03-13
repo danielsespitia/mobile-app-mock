@@ -2,9 +2,9 @@ import styled from 'styled-components/native';
 import { StyleSheet } from 'react-native';
 
 export const AppIntro = styled.View`
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #4282f4;
-  height: 380px;
+  height: 250px;
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
   align-self: center;
@@ -16,6 +16,7 @@ export const AppIntro = styled.View`
 export const Title = styled.Text`
   margin-left: auto;
   margin-right: auto;
+  margin-top: 60px;
   font-size: 42px;
   font-weight: bold;
   color: white;
@@ -37,7 +38,7 @@ export const ProfilePicture = styled.Image`
   height: 150px;
   width: 150px;
   border-radius: 100px;
-  margin-top: 300px;
+  margin-top: 170px;
   margin-left: auto;
   margin-right: auto;
 `;
