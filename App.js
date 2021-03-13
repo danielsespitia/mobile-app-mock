@@ -23,8 +23,12 @@ const AppIntro = styled.View`
   justify-content: center;
   background-color: #4282f4;
   height: 380px;
-  width: 100%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  align-self: center;
+  width: 50%;
   position: absolute;
+  transform: scaleX(2);
 `;
 
 const Title = styled.Text`
@@ -33,19 +37,19 @@ const Title = styled.Text`
   font-size: 42px;
   font-weight: bold;
   color: white;
+  transform: scaleX(0.5);
 `;
 
 const Subtitle = styled.Text`
   margin-left: auto;
   margin-right: auto;
-  font-size: 22px;
+  font-size: 20px;
   color: white;
   opacity: 0.7;
+  transform: scaleX(0.5);
 `;
 
-const ProfilePictureContainer = styled.View`
-  z-index: 2;
-`;
+const ProfilePictureContainer = styled.View``;
 
 const ProfilePicture = styled.Image`
   height: 150px;
@@ -172,9 +176,7 @@ export default function App() {
                 'http://alohahotelpalmsprings.com/template/imgs/testimonial-1.jpg',
             }}
           />
-          <ProfilePictureUpload
-              source={require('./assets/photoicon.png')}
-          />
+          <ProfilePictureUpload source={require('./assets/photoicon.png')} />
         </ProfilePictureContainer>
         <Username>User Name</Username>
         <CardTitle>Alerts</CardTitle>
