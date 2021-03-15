@@ -1,6 +1,6 @@
 # Mobile App Mock - Technical Test
 
-Developed with JavaScript in React Native, the goal was to reproduce a section from a reference Mobile App screenshot.
+Developed with JavaScript in React Native, to reproduce a section from a reference Mobile App screenshot.
 
 ![Mobile-App-Mock](https://user-images.githubusercontent.com/63252057/111131145-f1267880-8545-11eb-8d63-01397e28e4c9.PNG)
 
