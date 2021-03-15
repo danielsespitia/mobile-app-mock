@@ -2,7 +2,7 @@
 
 Developed with JavaScript in React Native reproducing a section from a reference Mobile App screenshot.
 
-![mobile-app-mock](https://user-images.githubusercontent.com/63252057/111130001-ba9c2e00-8544-11eb-8db8-1e8fe4289c02.png)
+![Mobile-App-Mock](https://user-images.githubusercontent.com/63252057/111131145-f1267880-8545-11eb-8d63-01397e28e4c9.PNG)
 
 ## Built With
 - Javascript.
