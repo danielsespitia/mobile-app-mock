@@ -21,4 +21,4 @@ Developed with JavaScript in React Native, the goal was to reproduce a section f
 ## Getting Started 
 To run this project it is necessary to have Node.js and Expo installed on your machine, it is also necessary to have a Device Emulator (like Android Studio or simillar) installed to view the App in a mobile environment. You can also view the app directly on your phone or Expo Web Browser Emulation. 
 
-To run the app, run one of the following commands: `yarn install` or `npm install`. Once the dependencies installation is done, you will be able to run the app with `yarn start` or `npm start` through your Expo Developer Tools and display it in your device emulator, smartphone or web browser.
+To run the app, you have to install its dependencies first by running one of the following commands: `yarn install` or `npm install`. Once the dependencies installation is done, you will be able to run the app with the commands `yarn start` or `npm start` through your Expo Developer Tools and display it in your device emulator, smartphone or web browser.
