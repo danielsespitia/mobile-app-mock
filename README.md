@@ -2,6 +2,8 @@
 
 Developed with JavaScript in React Native reproducing a section from a reference Mobile App screenshot.
 
+![DanielEspitia-dashboard-mock-technical-test](https://user-images.githubusercontent.com/63252057/111129957-ae17d580-8544-11eb-8472-35176a217107.png)
+
 ## Built With
 - Javascript.
 - React Native.
